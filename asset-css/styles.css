@@ -282,6 +282,7 @@
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+  cursor: pointer;
 }
 .fa-heart:active {
   background: linear-gradient(180deg, #ff79da, #9356dc);
@@ -447,9 +448,9 @@ a {
   background-color: #9356dc;
   color: white;
   left: -10px;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -831,8 +832,11 @@ footer a {
     width: 25%;
     margin: 15px;
   }
+  h2 {
+    font-size: 20px;
+  }
   .explorer .explorer__title {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 47px;
   }

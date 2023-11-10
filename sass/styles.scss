@@ -254,6 +254,7 @@
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    cursor: pointer;
     &:active {
         background: $color-button;
         -webkit-background-clip: text;
@@ -609,8 +610,11 @@ footer a {
         width: 25%;
         margin: 15px;
     }
+    h2{
+        font-size: 20px;
+    }
     .explorer .explorer__title {
-        font-size: 40px;
+        font-size: 24px;
         font-weight: 700;
         line-height: 47px;
     }
