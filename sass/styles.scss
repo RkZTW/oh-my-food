@@ -33,84 +33,78 @@
         z-index: 5;
     }
     // Titre ohmyfood
-    .loader__title {
-        margin-top: -228px;
-        font-size: $font-size-45;
-        position: absolute;
-        opacity: 1;
-        z-index: 5;
-        color: #9356dc;
-        display: flex;
-        justify-content: center;
+    .loader__title { //ohmyfood
+        font-size: $font-size-45; // taille font
+        position: absolute; // absolute 
+        opacity: 1; // opacité de base 
+        z-index: 5; // index de base 
+        display: flex; // dflex
+        justify-content: center; 
         align-items: flex-end;
         font-family: Shrikhand;
-        background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
-        background-clip: text;
-        -webkit-background-clip: text;
         animation: loader__title-anim $loader-container-duration cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 normal both;
-        background-size: 200% 100%;
-        background-position: 100% 0;
+        // 0s = 0s de delai / 1 = une itération / normal = direction de l'animation / both appliquer les styles avant et après l'anim
     }
 
     @keyframes loader__title-anim {
         0% {
             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            opacity: 0;
-            transform: translateY(-200px);
+            opacity: 0;// invisible
+            transform: translateY(-200px); //annimation a -200px
         }
         10% {
             animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-            opacity: 1;
-            transform: translateY(0);
-            color: #9356dc;
+            opacity: 1; // visible
+            transform: translateY(0); // arriver a ça position demander 
+            color: #9356dc; // couleur
         }
         20% {
             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            transform: translateY(15px);
-            color: #ff79da;
+            transform: translateY(15px); // rebond de 15px
+            color: #ff79da;// couleur
         }
         30% {
             animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-            transform: translateY(0);
+            transform: translateY(0); // retour position demander
             color: #ff79da;
         }
         40% {
             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            transform: translateY(20px);
+            transform: translateY(20px); // rebond de 20px
             color: #99e2d0;
         }
         50% {
             animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-            transform: translateY(0);
+            transform: translateY(0); //retour position demander 
             color: #99e2d0;
         }
         60% {
             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            transform: translateY(25px);
+            transform: translateY(25px); // rebond de 25px
             color: #9356dc;
         }
         70% {
             animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-            transform: translateY(0);
+            transform: translateY(0); // retour position demander 
             color: #9356dc;
         }
 
         80% {
             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            transform: translateY(30px);
+            transform: translateY(30px); // rebond de 30px
             color: #ff79da;
         }
 
         96% {
             animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-            transform: translateY(-150px);
+            transform: translateY(-150px); // sortie de la page 
             color: #ff79da;
         }
 
         100% {
             animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transform: translateY(-150px);
-            opacity: 0;
+            opacity: 0; // invisible 
             color: #99e2d0;
         }
     }
@@ -130,7 +124,7 @@
         0% {
             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
             transform: translateY(250px);
-            color: nth($colors, 1);
+            color: nth($colors, 1);// autre façon de changer la couleur via des variables 3 couleurs dans la var je selectionne la 1 
         }
 
         10% {
@@ -213,19 +207,19 @@
         }
     }
     .loader__spinner {
-        position: absolute;
-        z-index: 6;
-        display: flex;
-        align-items: center;
+        position: absolute;// position absolute// 
+        z-index: 6; //6 car background a 5//
+        display: flex; //dflex //
+        align-items: center; 
         justify-content: center;
-        width: 80%;
+        width: 80%; 
         height: 60%;
         margin-left: -77px;
         margin-top: -125px;
         div {
-            transform-origin: $spinner-inner-size $spinner-inner-size;
+            transform-origin: $spinner-inner-size;
             animation: loader-spinner $animation-duration-spinner * $total-iterations linear infinite;
-            animation-fill-mode: forwards;
+            animation-fill-mode: forwards; 
 
             &:after {
                 content: " ";
@@ -520,7 +514,7 @@ footer a {
 } //met le hidden ect sur les textes//
 
 .calque {
-    @include calque-styles; // Utilisation des styles pour le calque anim ect
+    @include calque-styles; // Utilisation des styles defaut pour le calque (L316)
 }
 
 .fa-circle-check {
@@ -533,7 +527,7 @@ footer a {
 
 .menu__button:active .menu__plat, //clique bouton = action menu plat h3//
 .menu__button:active .menu_p { //clique bouton = action paragraph //
-    overflow: hidden; //cache le contenue qui déborde du bloc txt// 
+    overflow: hidden; //cache le contenue qui déborde du bloc txt (enfant 1)// 
     text-overflow: ellipsis; // affiche les trois "..." // 
     white-space: nowrap; // ne met pas le texte a la ligne quand il y a pas de place// 
     z-index: 2;
@@ -541,7 +535,7 @@ footer a {
 
 .menu__button:active .calque, //clique bouton = action sur calque //
 .menu__button:active .menu__prix { //clique bouton = action sur prix//
-    transform: translateX(-70px); //déplacement horizontale de -70px//
+    transform: translateX(-70px); //déplacement horizontale de -70px calque et prix (enfant 2)//
     z-index: 1;
 }
 

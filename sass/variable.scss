@@ -313,7 +313,7 @@ $box-shadow-hover: 0px 4px 10px 0px #00000040;
     align-content: center;
 }
 
-@mixin calque-styles {
+@mixin calque-styles { //valeur par défaut du calque voir animation dans le styles.scss L542
     background-color: #99e2d0; // couleur du calque 
     width: 70px; // largeur du calque // 
     position: absolute; // position absolute sur parent en relatif// 
