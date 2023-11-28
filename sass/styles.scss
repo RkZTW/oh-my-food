@@ -512,7 +512,7 @@ footer a {
 }
 
 .menu__button {
-    @include menu-button-styles; // Utilisation des styles pour les boutons de menu
+    @include menu-button-styles; // Utilisation des styles pour les boutons de menu parent du calque
 }
 
 .menu__button--container {
