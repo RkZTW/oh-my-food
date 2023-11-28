@@ -251,19 +251,19 @@
 }
 // anim coeur //
 .fa-heart {
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    cursor: pointer;
-    &:active {
-        background: $color-button;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    color: transparent; //permet de retiré la couche noir du coeur.// 
+    -webkit-text-stroke-width: 1px; //lui crée une bordure de 1px//
+    -webkit-text-stroke-color: black; //color la bordure en noir //
+    cursor: pointer; //change le curseur// 
+    &:active { //quand je clique// 
+        background: $color-button;//la couleurs du coeur prend la couleur de ma variable ce qui est un dégradé de couleurs //
+        -webkit-background-clip: text; //permet de cibler uniquement le contenue du bloc et pas le complet (couleur du coeur pas en dehors)//
+        -webkit-text-fill-color: transparent;//faire devenir transparent le contour du coeur//
     }
-    &:hover {
-        background: $color-button;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    &:hover { //au survol//
+        background: $color-button; // couleur de la variable
+        -webkit-background-clip: text; //cible le contenue du coeur//
+        -webkit-text-fill-color: transparent; //rend le contour du coeur transparent//
     }
 }
 // class de base répétition //
@@ -517,31 +517,31 @@ footer a {
 
 .menu__button--container {
     @include menu-button-container-styles; // Utilisation des styles pour les conteneurs de bouton de menu
-}
+} //met le hidden ect sur les textes//
 
 .calque {
-    @include calque-styles; // Utilisation des styles pour le calque
+    @include calque-styles; // Utilisation des styles pour le calque anim ect
 }
 
 .fa-circle-check {
     @include check-icon-styles; // Utilisation des styles pour l'icône de coche
 }
-.fa-circle-check:hover,
-.fa-circle-check:active {
-    transform: rotate(360deg);
+.fa-circle-check:hover, //survol//
+.fa-circle-check:active { //click//
+    transform: rotate(360deg); //anim de l'icone valider
 }
 
-.menu__button:active .menu__plat,
-.menu__button:active .menu_p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.menu__button:active .menu__plat, //clique bouton = action menu plat h3//
+.menu__button:active .menu_p { //clique bouton = action paragraph //
+    overflow: hidden; //cache le contenue qui déborde du bloc txt// 
+    text-overflow: ellipsis; // affiche les trois "..." // 
+    white-space: nowrap; // ne met pas le texte a la ligne quand il y a pas de place// 
     z-index: 2;
 }
 
-.menu__button:active .calque,
-.menu__button:active .menu__prix {
-    transform: translateX(-70px);
+.menu__button:active .calque, //clique bouton = action sur calque //
+.menu__button:active .menu__prix { //clique bouton = action sur prix//
+    transform: translateX(-70px); //déplacement horizontale de -70px//
     z-index: 1;
 }
 
@@ -550,7 +550,7 @@ footer a {
     @include menu-text-styles; // Utilisation des styles pour le texte de menu
 }
 
-.menu_p {
+.menu_p { // modification de texte ciblé sur le p par rapport a menu__plat // 
     font-size: 0.78rem;
     font-weight: 300;
     line-height: 18px;

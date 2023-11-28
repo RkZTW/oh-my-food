@@ -317,9 +317,11 @@ $box-shadow-hover: 0px 4px 10px 0px #00000040;
     background-color: #99e2d0;
     width: 70px;
     position: absolute;
-    transition: transform 0.3s;
+    transition: transform 0.3s;// temps d'anim
     height: 100%;
-    right: -70px;
+    right: -70px; //permet de l’envoyer sur le côté droit pour le faire rentrer par la suite
+    // on le voit pas ici mais un hidden est appliqué à ma div parent
+    // pour le rendre invisible en non active. 
     top: 0%;
 }
 
