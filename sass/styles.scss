@@ -295,6 +295,7 @@
 .active {
     background: $color-button;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 // class de base répétition FIN //
