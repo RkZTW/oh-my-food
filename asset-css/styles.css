@@ -890,17 +890,18 @@ footer a {
   .menu__2,
   .menu__3 {
     width: 80%;
+    align-items: center;
   }
   .menu__title {
-    margin: 2vw 0vw 1vw 3.87vw;
+    margin: 2vw 58vw 1vw 1.87vw;
   }
   .menu__button {
     width: 100%;
     padding: 0px 0px 0px 9px;
     margin: 0.5vw 3.47vw 0.5vw 3.47vw;
   }
-  .menu__button:active .menu__plat,
-  .menu__button:active .menu_p {
+  .menu__button:hover .menu__plat,
+  .menu__button:hover .menu_p {
     overflow: visible;
     text-overflow: clip;
   }
@@ -955,6 +956,9 @@ footer a {
   .menu__2,
   .menu__3 {
     width: 73%;
+  }
+  .menu__title {
+    margin: 2vw 53vw 1vw 1.87vw;
   }
   .card__restaurant--enchante {
     width: 73%;
